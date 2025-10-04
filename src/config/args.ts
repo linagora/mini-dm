@@ -113,6 +113,7 @@ export interface Config {
   // James plugin
   james_webadmin_url?: string;
   james_webadmin_token?: string;
+  james_signature_template?: string;
 
   // Accept additional config keys for non core plugins
   [key: string]:
@@ -285,6 +286,7 @@ const configArgs: ConfigTemplate = [
   // James plugin
   ['--james-webadmin-url', 'DM_JAMES_WEBADMIN_URL', 'http://localhost:8000'],
   ['--james-webadmin-token', 'DM_JAMES_WEBADMIN_TOKEN', ''],
+  ['--james-signature-template', 'DM_JAMES_SIGNATURE_TEMPLATE', ''],
 
   /* Access control plugins */
 
