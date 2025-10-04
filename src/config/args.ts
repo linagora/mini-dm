@@ -108,10 +108,12 @@ export interface Config {
   // Special attributes
   mail_attribute?: string;
   quota_attribute?: string;
+  display_name_attribute?: string;
 
   // James plugin
   james_webadmin_url?: string;
   james_webadmin_token?: string;
+  james_signature_template?: string;
 
   // Accept additional config keys for non core plugins
   [key: string]:
@@ -172,6 +174,7 @@ const configArgs: ConfigTemplate = [
   // Special attributes
   ['--mail-attribute', 'DM_MAIL_ATTRIBUTE', 'mail'],
   ['--quota-attribute', 'DM_QUOTA_ATTRIBUTE', 'mailQuota'],
+  ['--display-name-attribute', 'DM_DISPLAY_NAME_ATTRIBUTE', 'displayName'],
 
   // Default classes to insert into LDAP
   [
@@ -283,6 +286,7 @@ const configArgs: ConfigTemplate = [
   // James plugin
   ['--james-webadmin-url', 'DM_JAMES_WEBADMIN_URL', 'http://localhost:8000'],
   ['--james-webadmin-token', 'DM_JAMES_WEBADMIN_TOKEN', ''],
+  ['--james-signature-template', 'DM_JAMES_SIGNATURE_TEMPLATE', ''],
 
   /* Access control plugins */
 
